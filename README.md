@@ -23,16 +23,16 @@ FirebaseCrash.log('User logged in');
 
 FirebaseCrash.logcat('User logged in');
 
-// Android only
 // Params:
 // - message: string, required
-// - debug level: int, optional, default 3 (https://developer.android.com/reference/android/util/Log.html)
-// - tag: string, optional, default 'RNFirebaseCrashReport'
+// - (Android only) debug level: int, optional, default 3 (https://developer.android.com/reference/android/util/Log.html)
+// - (Android only) tag: string, optional, default 'RNFirebaseCrashReport'
 FirebaseCrash.logcat('User logged in', 3, 'MyTag');
 
 /*
- * Android only
  * Report errors on demand
+ * (Android): would not hard crash
+ * (iOS): would hard crash
  */
 
 FirebaseCrash.report('A weird thing just happened...');
